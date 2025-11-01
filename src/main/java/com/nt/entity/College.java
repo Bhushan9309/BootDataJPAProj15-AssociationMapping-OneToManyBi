@@ -40,7 +40,7 @@ public class College {
     @NonNull
     private String caddrs;
     
-    @OneToMany(targetEntity = Student.class,cascade = CascadeType.ALL,
+    @OneToMany(targetEntity = Student.class,cascade = CascadeType.ALL,fetch = FetchType.EAGER,
     		               mappedBy = "collegeInfo")
     private  Set<Student> studentsInfo; //for OneToMany
     

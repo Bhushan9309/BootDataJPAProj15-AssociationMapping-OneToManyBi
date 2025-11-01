@@ -1,16 +1,13 @@
 package com.nt.runners;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import com.nt.entity.College;
-import com.nt.entity.Student;
+
 import com.nt.service.ICollegeMgmtService;
 @Component
 public class AssociationMappingTestRunner implements CommandLineRunner {
@@ -69,7 +66,7 @@ public class AssociationMappingTestRunner implements CommandLineRunner {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}*/
-		try {
+		/*try {
 			List<Student> list=clgService.showStudentsAndThierCollege();
 			list.forEach(st->{
 				System.out.println("Child : : ==> "+st);
@@ -80,8 +77,44 @@ public class AssociationMappingTestRunner implements CommandLineRunner {
 			
 		} catch (Exception e) {
 			e.printStackTrace();
+		}*/
+		/*try {
+			String msg=clgService.deleteCollegeAndItsStudentsById(1003);
+			System.out.println(msg);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}*/
+		/*try {
+			String msg=clgService.deleteAllStudentsOfACollegeById(1004);
+			System.out.println(msg);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}*/
+		/*	try {
+				String msg=clgService.deleteOnlyOneStudentOfACollege(7);
+				System.out.println(msg);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}*/
+		/*	try {
+				String msg=clgService.deleteAllStudentsAndTheirCollege(List.of(8,9));
+				System.out.println(msg);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}*/
+		/*try {
+			Student st=new Student("Bhushan","Nandurbar");
+			String msg=clgService.addNewStudentToCollege(1000, st);
+			System.out.println(msg);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}*/
+		try {
+			String msg=clgService.transferStudentToNewCollege(17, 1004);
+			System.out.println(msg);
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-		
 		
 
 	}

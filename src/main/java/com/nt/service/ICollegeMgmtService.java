@@ -11,4 +11,13 @@ public interface ICollegeMgmtService {
      
      public List<College> showCollegeAndItsStudents();
      public List<Student> showStudentsAndThierCollege();
+     
+     public String deleteCollegeAndItsStudentsById(int cno);
+     public String deleteAllStudentsOfACollegeById(int cno);
+     public String deleteOnlyOneStudentOfACollege(int sno);
+     
+     public String deleteAllStudentsAndTheirCollege(List<Integer> sids);
+     public String addNewStudentToCollege(int cid,Student st);
+     
+     public String transferStudentToNewCollege(int sid,int cid);
 }
